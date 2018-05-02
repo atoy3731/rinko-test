@@ -1,0 +1,22 @@
+.centered-table {
+  margin: 0 100px 0 100px;
+}
+
+.page-header {
+  padding: 20px;
+  text-align: center;
+  align: middle;
+}
+
+.mat-row {
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  background-color: #FFFFFF;
+}
+
+.mat-row:hover {
+  background-color: #F0F0F0;
+  cursor: pointer;
+}

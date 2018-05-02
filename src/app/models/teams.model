@@ -1,0 +1,6 @@
+export interface Team {
+  id: number;
+  name: string;
+  rinko_points: number;
+  owner: string;
+}

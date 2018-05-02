@@ -1,0 +1,23 @@
+<mat-toolbar>
+  <span>
+    <mat-menu #rootMenu="matMenu">
+  <button mat-menu-item [routerLink]="['/teams']">Standings/Teams</button>
+  <button mat-menu-item>My Team</button>
+  <button mat-menu-item [routerLink]="['/players']">Players</button>
+  <button mat-menu-item *ngIf="isAdmin()">Admin</button>
+</mat-menu>
+
+<button mat-icon-button [matMenuTriggerFor]="rootMenu">
+  <mat-icon>view_headline</mat-icon>
+</button>
+  </span>
+  <span class="fill-space"></span>
+  <span>Rinko</span>
+</mat-toolbar>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+
+

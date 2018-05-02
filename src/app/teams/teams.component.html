@@ -1,0 +1,20 @@
+<div class="mat-h1 page-header">Teams</div>
+<div class="centered-table mat-elevation-z1" hide show-gt-sm flex>
+      <mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let team"> {{team.name}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="owner">
+          <mat-header-cell *matHeaderCellDef> Owner </mat-header-cell>
+          <mat-cell *matCellDef="let team"> {{team.owner}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="rinko_points">
+          <mat-header-cell *matHeaderCellDef> Points </mat-header-cell>
+          <mat-cell *matCellDef="let team"> {{team.rinko_points}} </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectTeam(row.id)"></mat-row>
+      </mat-table>
+</div>
+

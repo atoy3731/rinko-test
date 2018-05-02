@@ -1,0 +1,44 @@
+.centered-table {
+  margin: 0 100px 0 100px;
+}
+
+.page-header {
+  padding: 20px;
+  text-align: center;
+  align: middle;
+}
+
+.mat-row {
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  background-color: #FFFFFF;
+}
+
+.mat-row:hover {
+  background-color: #F0F0F0;
+  cursor: pointer;
+}
+
+mat-paginator {
+  float: right;
+  width: 45%;
+}
+
+mat-input-container {
+  margin-left: 10px;
+}
+
+.spinner-container {
+  position: absolute;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
