@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TeamComponent} from './team/team.component';
 import {PlayersComponent} from './players/players.component';
+import {MainComponent} from './main/main.component';
+import {AuthGuard} from './auth.guard';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'teams',
-    pathMatch: 'full'
+    component: MainComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'teams',
@@ -22,7 +28,8 @@ const routes: Routes = [
   {
     path: 'players',
     component: PlayersComponent
-  }
+  },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
@@ -30,6 +37,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule {}

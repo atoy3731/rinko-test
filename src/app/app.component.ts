@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
+import { AuthService} from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent implements OnInit {
 
   teams: object[];
 
-  constructor() {}
+  constructor(private auth: AuthService) {}
 
   ngOnInit() {
     this.teams = [
@@ -26,6 +27,14 @@ export class AppComponent implements OnInit {
 
   isAdmin() {
     return false;
+  }
+
+  isLoggedIn() {
+    return this.auth.isLoggedIn();
+  }
+
+  logout() {
+    this.auth.logout();
   }
 
 }

@@ -57,19 +57,7 @@ export class ApiService {
     return this.http.delete<object>(url, requestOptions);
   }
 
-}
-
-export interface Team {
-    id: number;
-    name: string;
-    rinko_points: number;
-    owner: string;
-}
 
 
-export interface Player {
-  id: number;
-  name: string;
-  rinko_points: number;
-  owner: string;
 }
+
